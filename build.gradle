@@ -1,0 +1,113 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+}
+apply plugin: 'com.android.application'
+
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
+
+    defaultConfig {
+        applicationId "com.godlontonconsulting.entranze"
+        minSdkVersion 21
+        targetSdkVersion 27
+        versionCode 39
+        versionName "1.39"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    useLibrary 'org.apache.http.legacy'
+
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+}
+
+dependencies {
+
+    implementation 'com.mcxiaoke.volley:library-aar:1.0.0'
+    implementation 'com.android.support:appcompat-v7:27.0.3'
+    implementation 'com.android.support:recyclerview-v7:27.0.3'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    implementation 'io.reactivex:rxjava:1.1.6'
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    implementation 'com.google.firebase:firebase-core:16.0.0'
+    implementation 'com.google.firebase:firebase-messaging:17.0.0'
+
+    //compile 'com.android.support:cardview-v7:26.1.0'
+    //implementation 'com.github.johnkil.android-robototextview:robototextview:2.5.1'
+    implementation 'com.android.support:design'
+    implementation 'com.android.support:support-v4'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    // FirebaseUI for Firebase Realtime Database
+    implementation 'com.firebaseui:firebase-ui-database:3.3.1'
+    // FirebaseUI for Cloud Firestore
+    implementation 'com.firebaseui:firebase-ui-firestore:3.3.1'
+    // FirebaseUI for Firebase Auth
+    implementation 'com.firebaseui:firebase-ui-auth:3.3.1'
+    // FirebaseUI for Cloud Storage
+    implementation 'com.firebaseui:firebase-ui-storage:3.3.1'
+    // Facebook Login only
+    implementation 'com.facebook.android:facebook-login:4.33.0'
+
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    implementation 'com.mikhaellopez:circularimageview:3.0.2'
+
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    implementation 'com.hbb20:ccp:1.7.6'
+    implementation 'com.google.android.gms:play-services-places:15.0.1'
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
+
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.7.0'
+    implementation 'com.squareup.okio:okio:1.14.0'
+    implementation 'me.dm7.barcodescanner:zxing:1.9.8'
+    implementation 'com.uber.sdk:rides-android:0.6.1'
+    implementation 'info.vividcode:date-format-iso8601:1.0.0'
+    implementation 'com.github.kenglxn.QRGen:android:2.2.0'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.rom4ek:arcnavigationview:1.0.3'
+    implementation 'com.miguelcatalan:materialsearchview:1.4.0'
+    implementation 'com.github.f0ris.sweetalert:library:1.5.2'
+    implementation 'com.valdesekamdem.library:md-toast:0.9.0'
+    implementation 'com.andrognito.pinlockview:pinlockview:2.0.1'
+    implementation('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
+        transitive = true;
+    }
+    implementation 'com.github.ivbaranov:materialfavoritebutton:0.1.4'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.1.0'
+
+    implementation ('com.github.aviadmini:quickimagepick:2.1.7'){
+        // Uncomment next line if you have dependency conflict with AppCompat v7
+        // exclude group: 'com.android.support', module: 'appcompat-v7'
+    }
+
+    implementation 'com.koushikdutta.ion:ion:2.+'
+    implementation 'com.jaredrummler:material-spinner:1.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    //
+    implementation 'id.zelory:compressor:2.1.0'
+
+}
+
+// ADD THIS AT THE BOTTOM
+apply plugin: 'com.google.gms.google-services'

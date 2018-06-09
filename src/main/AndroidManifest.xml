@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.godlontonconsulting.entranze">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- Permission to vibrate - recommended, allows vibration feedback on scan -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- Camera features - recommended -->
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false" />
+
+    <application
+        android:name="com.godlontonconsulting.entranze.app.MyApplication"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:allowBackup="false"
+        tools:replace="android:allowBackup"
+        android:hardwareAccelerated="false"
+        android:theme="@style/MyMaterialTheme">
+
+        <!--android:allowBackup="false"-->
+        <activity
+            android:name="com.godlontonconsulting.entranze.activity.RegActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:label="Entranze">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.godlontonconsulting.entranze.activity.AccountActivity"
+            android:label="Entranze"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+
+        <activity
+            android:name="com.godlontonconsulting.entranze.activity.FollowersEventsActivity"
+            android:label="Entranze"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+
+        <activity
+            android:name="com.godlontonconsulting.entranze.activity.TicketDetailsActivity"
+            android:label="Entranze"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+
+        <activity
+        android:name="com.godlontonconsulting.entranze.activity.UpdateEventActivity"
+        android:label="Entranze"
+        android:windowSoftInputMode="adjustPan">
+    </activity>
+
+        <activity
+            android:name="com.godlontonconsulting.entranze.activity.PaymentsActivity"
+            android:label="Entranze"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+
+        <activity
+            android:name="com.godlontonconsulting.entranze.activity.GetFollowersActivity"
+            android:label="Entranze"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+
+        <activity
+            android:name="com.godlontonconsulting.entranze.activity.HomeActivity"
+            android:label="Entranze"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+
+        <activity
+            android:name="com.godlontonconsulting.entranze.activity.FavEventsActivity"
+            android:label="Entranze"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+
+        <activity
+        android:name="com.godlontonconsulting.entranze.activity.ManageEventsActivity"
+        android:label="Manage Your Events"
+        android:screenOrientation="portrait"
+        android:windowSoftInputMode="adjustPan">
+
+    </activity>
+
+        <activity
+            android:name="com.godlontonconsulting.entranze.activity.LogoutPinlockActivity"
+            android:label="Manage My Event"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+
+        </activity>
+
+        <activity
+            android:name="com.godlontonconsulting.entranze.activity.ViewGatekeepersActivity"
+            android:label="View your GateKeepers"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+
+        </activity>
+
+        <activity
+            android:name="com.godlontonconsulting.entranze.activity.ManageYourEventDetailsActivity"
+            android:label="Manage Your Events"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+
+        <activity
+            android:name="com.godlontonconsulting.entranze.activity.SettingsActivity"
+            android:label="Entranze"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+
+        <activity
+            android:name="com.godlontonconsulting.entranze.activity.GateKeeperActivity"
+            android:label="Entranze"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+
+        </activity>
+
+        <activity
+            android:name="com.godlontonconsulting.entranze.activity.ScannerActivity"
+            android:label="Entranze"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+
+        <activity
+            android:name="com.godlontonconsulting.entranze.activity.EventDetailsActivity"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+
+        <activity
+            android:name="com.godlontonconsulting.entranze.activity.AddEventActivity"
+            android:label="Entranze"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyD9f8D0bfgGFZIAMU_Yhaed88Hj48RP5P0" />
+
+
+        <receiver
+            android:name="com.godlontonconsulting.entranze.receiver.SmsReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Intent service -->
+        <service
+            android:name="com.godlontonconsulting.entranze.service.HttpService"
+            android:exported="false" />
+
+        <service
+            android:name="com.godlontonconsulting.entranze.firebase.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="com.godlontonconsulting.entranze.firebase.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="d20dc8e5e4c6b387b5a8a47a86b9830d30f85fc5" />
+    </application>
+
+</manifest>
+

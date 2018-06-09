@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "972855062264",
+    "firebase_url": "https://entranze-6ec7f.firebaseio.com",
+    "project_id": "entranze-6ec7f",
+    "storage_bucket": "entranze-6ec7f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:972855062264:android:912530b4e7fc0017",
+        "android_client_info": {
+          "package_name": "com.godlontonconsulting.entranze"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "972855062264-arrsvi2uh3u276u5u6lgh49otejr7b8a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.godlontonconsulting.entranze",
+            "certificate_hash": "0947876d093731673f82eabd1506de6fef691159"
+          }
+        },
+        {
+          "client_id": "972855062264-futbo3ird50lkudtejncb0b1mve9qkak.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYzCDm8QpMkt2tU5LYQEHLFdazBx0WjYQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "972855062264-futbo3ird50lkudtejncb0b1mve9qkak.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
